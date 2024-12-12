@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Akio's Design project 1</title>
+    <style>
+      .spacing {padding: 15px;}
+
+      .bg-orange {background-color: orange}
+      .text-color-black {color: black}
+      p {font-family: GAME; font-size: 20px;}
+      .btn-red { border-color: red; color: white; }
+      .btn-red:hover { background-color: red; }
+      body, html {margin: 0; padding: 0; height: 100%; overflow: hidden; cursor: none;}
+      body {overflow-y: auto; display: flex; flex-direction: column;}
+      .content {position: relative;z-index: 1;color: white;text-align: center;padding: 20px;}
+      .icon-links { display: flex; justify-content: center; gap: 60px; height: 250px;}
+
+      body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } 
+      canvas{ display: block; } 
+
+      .video-container {width: 80%;max-width: 800px; margin: 0 auto; display: flex; justify-content: center; opacity: 100; position: relative; z-index: 2; padding-top: 5%;}
+
+      #particles-js{ position:fixed; width: 100%; height: 100%; background-color: black; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; z-index: -1;} 
+
+      .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: black; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } 
+      .js-count-particles{ font-size: 1.1em; }
+      #stats, .count-particles{ --user-select: none; margin-top: 5px; margin-left: 5px; }
+      #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } 
+      .count-particles{ border-radius: 0 0 3px 3px; }
+      .no_cursor {cursor: none;}
+      .cursor {
+          position: fixed;
+          width: 30px;
+          height: 30px;
+          border: 3px solid rgba(245, 245, 245, 0.8);
+          border-radius: 50%;
+          background: rgba(245, 245, 245, 0.1);
+          pointer-events: none;
+          mix-blend-mode: difference;
+          z-index: 9999;
+          transition: transform 0.15s ease;
+      }
+
+    </style>
+</head>
+<body>
+  <div class="cursor"></div>
+  <div id="title"><%- include('partials/navbar') %></div>
+    <div id="particles-js" class="no_cursor"></div>
+
+    <div class="card d-flex justify-content-center align-items-center container-fluid no_cursor" style="width: 1000px;">
+        <h2 class="card-title d-flex justify-content-center">Web, NameCard and Sticker Designs</h2>
+        <p class="card-text d-flex justify-content-center"> Created using Adobe illustrator </p>
+    </div> 
+
+    <div class="video-container no_cursor">
+        <iframe width="100%" height="315" src=""
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+    </div>
+    <br><br><br>
+
+    <div class="card justify-content-center container-fluid no_cursor" style="width:1000px; height:4000px">
+      <div class="d-flex justify-content-center">
+      </div>
+      <div class="card-body">
+        <h3>Purpose of this design:</h3>
+        <br>
+        <p class="card-text d-flex justify-content-center">
+ 
+        </p>
+        <br>
+        <h3> </h3>
+        <br>
+        <p class="card-text d-flex justify-content-center">
+
+        </p>
+        <br><br>
+        <p class="card-text d-flex justify-content-center">
+          Over here, you can download this document that consist of more elaborated details of my work. ->->->
+          <a href="Web,NamecardandStickersDoc.pdf" id="download-link" class="btn btn-red d-flex justify-content-center no_cursor test-link" download="Web,NamecardandStickersDoc.pdf">Click Here To Download pdf</a>
+        </p>
+        <br><br><br><br><br>
+        <h3 class="card-title d-flex justify-content-center">Thats all for this project</h3>
+        <br>
+        <p class="card-text d-flex justify-content-center">If there is anything you would want to share to me, do contact me at my contact page.</p>
+        <br>
+        <p class="card-text d-flex justify-content-center">Thank you!</p>
+        <br><br><br><br><br>
+        <a href="#title" class=" btn btn-red d-flex justify-content-center no_cursor test-link">Back to Top</a>
+      </div>
+
+      <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+      <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+      <script>
+          particlesJS("particles-js", {
+              "particles": {
+                  "number": { "value": 100, "density": { "enable": true, "value_area": 800 }},
+                  "color": { "value": ['#800080', '#8B0000', '#FFA500' ]},
+                  "shape": { "type": "image", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 },
+                  "image": {"src":"Gamerlogo.png","width":100,"height":100}},    
+                  "opacity": { "value": 1, "random": true, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false }},
+                  "size": { "value": 15, "random": true, "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false }},
+                  "line_linked": { "enable": false, "distance": 500, "color": "#ffffff", "opacity": 0.4, "width": 2 },
+                  "move": { "enable": true, "speed": 0.5, "direction": "random", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 }}
+              },
+              "interactivity": {
+                  "detect_on": "canvas",
+                  "events": { "onhover": { "enable": true, "mode": "bubble" }, "onclick": { "enable": true, "mode": "repulse" }, "resize": true },
+                  "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 0.5 }}, "bubble": { "distance": 400, "size": 4, "duration": 0.3, "opacity": 1, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 }}
+              },
+              "retina_detect": true
+          });
+  
+          var count_particles, stats, update;
+          stats = new Stats();
+          stats.setMode(0);
+          stats.domElement.style.position = 'absolute';
+          stats.domElement.style.left = '0px';
+          stats.domElement.style.top = '0px';
+          document.body.appendChild(stats.domElement);
+          count_particles = document.querySelector('.js-count-particles');
+          update = function() {
+              stats.begin();
+              stats.end();
+              if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+                  count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+              }
+              requestAnimationFrame(update);
+          };
+          requestAnimationFrame(update);
+      </script>
+    <script src="/js/cursor.js"></script>
+
+</body>
+</html>
