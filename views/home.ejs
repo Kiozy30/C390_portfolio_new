@@ -22,10 +22,6 @@
             }
         }
         .btn { padding: 10px 5px; font-size: 30px;}
-        .btn-orange { border-color: orange; color: white; font-size: 50px; }
-        .btn-orange:hover { background-color: darkorange; }
-        .btn-purple { border-color: purple; color: white; }
-        .btn-purple:hover { background-color: darkblue; }
         .btn-red { border-color: red; color: white; animation: pulse 1s infinite;}
         .btn-red:hover { background-color: red; }
         .no_cursor {cursor: none;}
@@ -38,10 +34,11 @@
         .icon-linking { display: flex; justify-content: center; gap: 50px;}
         .icon-linking img { width: 50px; }
         .icon-linking img:hover {opacity: 50%;}
+        div img {width: 60%}
         h1 {font-size: 80px;}
         h2 {font-size: 40px;}
-        html, body { margin: 0; padding: 0; height: 230%; overflow-y: auto; cursor: none;}
-        #particles-js { position: absolute; width: 100%; height: 550%; background-color: black; z-index:-1; background-repeat: repeat; background-size: cover; background-position: 50% 50%; }
+        html, body { margin: 0; padding: 0; height: 220%; overflow-y: auto; cursor: none;}
+        #particles-js { position: absolute; width: 100%; height: 500%; background-color: black; z-index:-1; background-repeat: repeat; background-size: cover; background-position: 50% 50%; }
         .count-particles { background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; }
         .js-count-particles { font-size: 1.1em; }
         main {display: block;unicode-bidi: isolate;}
@@ -56,26 +53,49 @@
 <body>
     <div id="particles-js"></div>
     <div class="cursor"></div>
-        <main class="hero page" id="landing">
+    <div class="container d-flex justify-content-center align-items-center no_cursor col-md-10 page">
+        <div>
+            <br><br><br><br><br><br>
+            <div>
+                <img src="Gamerlogo.png">
+            </div>
+        </div>
+        <main class="hero" id="landing">
             <br><br><br><br><br><br><br><br><br><br><br><br>
-            <h1 class="d-flex justify-content-center text-colour">Kioz Collection</h1>
+            <h1 class=" d-flex justify-content-center text-colour">Kioz Collection</h1>
             <h3 class="d-flex justify-content-center text-colour">An inspiring programmer and gamer</h3>
             <div class="d-flex justify-content-center align-items-center">
                 <a href="#section1" class="btn btn-red no_cursor test-link">Proceed</a>
             </div>
         </main>
+    </div> 
+    <!-- <div id="aboutme" class="container d-flex justify-content-center align-items-center no_cursor" style="position: relative;">
+        <div class="row col-md-10">
+            <div class="col-md-6 d-flex flex-column justify-content-center">
+                <p class="text card-body">
+                    Hey There! My name is Akio and I am currently a Year 2 student studying the diploma of Digital Design and Development or D3D for short at Republic Polytechnic.
+                    I am born and raised in Singapore and my ethicity is chinese. 
+                    <br><br>
+                    "Enjoy the little things in life, be it in despair or in excitement." this quote is what I believed in in life and how I continue to strive my best in life.
+                    <a href="/about" class=" btn btn-red mx-3 mt-3 no_cursor test-link">Click here to see more about me!</a>
+                </p>
+            </div>
+            <div class="col-md-6 d-flex flex-column justify-content-center">
+                <img src="AboutMe.jpg" alt="Me" class="img-fluid mb-3" style="max-width: 80%;">
+            </div>
+        </div>
+    </div> -->
+    
         <br><br><br><br><br><br><br><br><br><br><br><br>
 
         <div class="divider-container-parallax"></div>
         <div id="section1">
             <%- include("partials/navbar") %>
-            <h1 class="d-flex justify-content-center">About Me</h1>
+            <h1 class="d-flex justify-content-center">Who Are You?</h1>
             <br><br>
             <div id="aboutme" class="container d-flex justify-content-center align-items-center no_cursor" style="position: relative;">
                 <div class="row col-md-10">
                     <div class="col-md-6 d-flex flex-column justify-content-center">
-                        <h2 class="card-title text-center">Who Am I?</h2>
-                        <br><br>
                         <p class="text card-body">
                             Hey There! My name is Akio and I am currently a Year 2 student studying the diploma of Digital Design and Development or D3D for short at Republic Polytechnic.
                             I am born and raised in Singapore and my ethicity is chinese. 
@@ -92,9 +112,10 @@
         </div>
         
         <br><br><br><br><br><br><br><br><br><br>
-        <br id="section2">
+        <br id="section2"><br><br>
         
         <div class="mx-3 mt-1 animate__animated animate__fadeInUp">
+            <br><br>
             <h1 class="d-flex justify-content-center align-items-center">Projects</h1>
             <br><br><br>
             <div class="row col-md-12 d-flex justify-content-center">

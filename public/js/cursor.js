@@ -1,3 +1,5 @@
+// This is the Java script for the whole cursor
+
 $(document).ready(function() {
     console.log("jQuery is loaded.");
 

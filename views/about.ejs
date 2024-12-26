@@ -8,21 +8,29 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Akio About</title>
     <style>
+        /*Body and HTML*/
         .spacing {padding: 20px; height: 10px;}
         body, html {margin: 0; padding: 0; height: 200%; overflow-y: auto;}
-        #background-video {position: fixed;top: 0;left: 0;min-width: 100%;min-height: 100%;z-index: -1;object-fit: cover;}
         .content {position: relative;z-index: 1;color: white;text-align: center;padding: 20px;}
+        /*Buttons*/
         .btn-black {background-color: black;}
         .btn-black:hover {background-color:white; color:black}
-        .icon-links { display: flex; justify-content: center; gap: 80px; margin-top: 70px; }
-        .icon-links img { width: 500px; cursor:none;}
+        .btn-red { border-color: red; color: white; animation: pulse 1s infinite;}
+        .btn-red:hover { background-color: red; }
+        /*Image*/
+        .image-pics { display: flex; justify-content: center; gap: 80px; margin-top: 70px; }
+        .image-pics img { width: 500px; cursor:none;}
+        /*background-color*/
         .bg-red {background-color: red;}
         .bg-black {background-color: black;}
+        /*Fonts*/
         .text {font-family: cursive;}
+        /*Particle-background*/
         #particles-js { position: fixed; width: 100%; height: 100%; background-color: black; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
         .count-particles { background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: 0.8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; }
         .js-count-particles { font-size: 1.1em; }
         #stats, .count-particles { margin-top: 5px; margin-left: 5px; }
+        /*cursor*/
         .no_cursor {cursor: none;}
         .cursor {position: fixed;width: 30px;height: 30px;border: 3px solid rgba(245, 245, 245, 0.8);border-radius: 50%;background: rgba(245, 245, 245, 0.1);pointer-events: none;mix-blend-mode: difference;z-index: 9999;transition: transform 0.15s ease;}
     </style>
@@ -31,9 +39,10 @@
 
     <div id="particles-js" class="no_cursor"></div>
     <div class="cursor"></div>
-    <div class="no_cursor">
-        <div id=title ><%- include('partials/navbar') %></div>
-        <h1 class="d-flex justify-content-center align-items-center no_cursor text" style="position: relative;">About Me</h1>
+    <div class="no_cursor" id=title>
+        <%- include('partials/navbar') %>
+        <h1 class="d-flex justify-content-center align-items-center no_cursor" style="position: relative;">About Me</h1>
+    </div>
 
     <div class="container d-flex justify-content-center align-items-center no_cursor" style="position: relative;">
         <div class="row col-md-10">
@@ -89,7 +98,7 @@
                       But dont get me wrong, I do love designing too!
                       <br>
                       The other skills that I learnt would be like:
-                      <ul>
+                      <ul class="text">
                         <li>teamwork skills,</li>
                         <li> public speaking,</li>
                         <li>problem solving,</li>
@@ -110,13 +119,36 @@
                 <img src="Volunteery.jpg" alt="Me" class="img-fluid mb-3" style="max-width: 100%;">
             </div>
             <div class="col-md-6 d-flex flex-column justify-content-center">
-                <h3 class="card-title text-center">What are my Archievements/Volunteery Work/Services that I have/done?</h3>
+                <h3 class="card-title text-center">What are my Achievements/Volunteery Work/Services & leaderships that I have/done?</h3>
+                <p class="text card-body">
+                    I have participated in different times of volunteery work and got different achievements in my life and here are some of the listed few below:
+                    <ul class="text"><h4>Achievements & Volunteering work:</h4>
+                        <li>Year: 2015, Joined Soka YMD Gym core.</li>
+                        <li>Year: 2020, volunteered and helped out with the elderly shelter.</li>
+                        <li>Year: 2021, participated in Singapore Youth Festival(SYF) with my CCA Concert Band, got certificate of achievement.</li>
+                        <li>Year: 2021, did up a VIA project that helped promote children 12 and under on recycling.</li>
+                        <li>Year: 2024, was a orientation peer support leader which helped with the year 1 for the school.</li>
+                        <li>Year: 2024, participated in NDP 2024 representing for SOKA.</li>
+                    </ul>
+                    <br>
+                </p>
+                <p class="text card-body">
+                    I also had different leadership roles in my life and these are the roles that I have taken:
+                    <ul class="text"><h4>Leadership Roles:</h4>
+                        <li>Year: 2019, Role: Chairperson of my sec 1 class</li>
+                        <li>Year: 2020, Role: Student Leader in the student council</li>
+                        <li>Year: 2020, Role: String bass Section Leader in Concert Band</li>
+                        <li>Year: 2021, Role: Concert band CCA Leader</li>
+                        <li>Year: 2024, Role: Right-Hand man in charge of Esports Mobile Legends section</li>
+                        <li>Year: 2024, Role: 2nd Safety commissioner in Esports CCA</li>
+                    </ul>
+                </p>
             </div>
         </div>
     </div>
-    <div class="card justify-content-center container-fluid bg-orange no_cursor" style="width:700px; height:450px">
+    <div class="card justify-content-center container-fluid bg-orange no_cursor" style="width:700px; height:600px">
         <div class="d-flex justify-content-center">
-            <img class="icons-links no_cursor"  src="document.jpeg" alt="Card image">
+            <img class="image-pics no_cursor"  src="document.jpeg" alt="Card image">
         </div>
         <div class="card-body no_cursor">
           <h3 class="card-title d-flex justify-content-center">This is my Resume</h3>
@@ -128,6 +160,7 @@
             <a href="CoverLetter.pdf" id="download-link" class=" btn btn-black download-link no_cursor test-link" download="CoverLetter.pdf">Download CoverLetter</a>
           </p>
         </div>
+        <a href="#title" class="btn btn-red no_cursor test-link">Back to the top</a>
     </div>
     <br><br>
     
