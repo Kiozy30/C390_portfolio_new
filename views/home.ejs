@@ -9,6 +9,37 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Akio Home</title>
     <style>
+        /*Buttons*/
+        .btn { padding: 10px 5px; font-size: 30px;}
+        .btn-red { border-color: red; color: white; animation: pulse 1s infinite;}
+        .btn-red:hover { background-color: red; }
+        /*Cursor*/
+        .no_cursor {cursor: none;}
+        .cursor {position: fixed;width: 30px;height: 30px;border: 3px solid rgba(245, 245, 245, 0.8);border-radius: 50%;background: rgba(245, 245, 245, 0.1);
+                pointer-events: none;mix-blend-mode: difference;z-index: 9999;transition: transform 0.15s ease;}
+        /*Text and fonts*/
+        .text {font-family: cursive;}
+        .text-size {font-size: 20px;}
+        h1 {font-size: 80px;}
+        h2 {font-size: 40px;}
+        /*Icons and img*/
+        .icon-links { display: flex; justify-content: center; gap: 50px;}
+        .icon-links img { width: 50px; }
+        .icon-linking { display: flex; justify-content: center; gap: 50px;}
+        .icon-linking img { width: 50px; }
+        .icon-linking img:hover {opacity: 50%;}
+        div img {width: 60%}
+        /*Html and Body*/
+        html, body { margin: 0; padding: 0; height: 220%; overflow-y: auto; cursor: none;}
+        /*Particle Css*/
+        #particles-js { position: absolute; width: 100%; height: 500%; background-color: black; z-index:-1; background-repeat: repeat; background-size: cover; background-position: 50% 50%; }
+        .count-particles { background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; }
+        .js-count-particles { font-size: 1.1em; }
+        /*Cover page Css*/
+        main {display: block;unicode-bidi: isolate;}
+        .hero { height: 100vh;overflow: hidden;position: relative;}
+        
+        /*Animations to change from one page to another*/
         .page {opacity: 1;transition: opacity 0.8s ease-out;animation: slideIn 1s ease-out;}
         .page.fade-out {opacity: 0;}
         @keyframes slideIn {
@@ -21,29 +52,6 @@
                 opacity: 1;
             }
         }
-        .btn { padding: 10px 5px; font-size: 30px;}
-        .btn-red { border-color: red; color: white; animation: pulse 1s infinite;}
-        .btn-red:hover { background-color: red; }
-        .no_cursor {cursor: none;}
-        .cursor {position: fixed;width: 30px;height: 30px;border: 3px solid rgba(245, 245, 245, 0.8);border-radius: 50%;background: rgba(245, 245, 245, 0.1);
-                pointer-events: none;mix-blend-mode: difference;z-index: 9999;transition: transform 0.15s ease;}
-        .text {font-family: cursive;}
-        .text-size {font-size: 20px;}
-        .icon-links { display: flex; justify-content: center; gap: 50px;}
-        .icon-links img { width: 50px; }
-        .icon-linking { display: flex; justify-content: center; gap: 50px;}
-        .icon-linking img { width: 50px; }
-        .icon-linking img:hover {opacity: 50%;}
-        div img {width: 60%}
-        h1 {font-size: 80px;}
-        h2 {font-size: 40px;}
-        html, body { margin: 0; padding: 0; height: 220%; overflow-y: auto; cursor: none;}
-        #particles-js { position: absolute; width: 100%; height: 500%; background-color: black; z-index:-1; background-repeat: repeat; background-size: cover; background-position: 50% 50%; }
-        .count-particles { background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; }
-        .js-count-particles { font-size: 1.1em; }
-        main {display: block;unicode-bidi: isolate;}
-        .hero { height: 100vh;overflow: hidden;position: relative;}
-        .sticky {position: sticky; top: 0;width: 100%;z-index: 1000;}
         .project {color: #ff474c; animation: slideIn 1s ease-out;}
         .project:hover {background-color: red; color: white;}
         .section3 {animation: slideIn 1s ease-out;}
@@ -63,7 +71,7 @@
         <main class="hero" id="landing">
             <br><br><br><br><br><br><br><br><br><br><br><br>
             <h1 class=" d-flex justify-content-center text-colour">Kioz Collection</h1>
-            <h3 class="d-flex justify-content-center text-colour">An inspiring programmer and gamer</h3>
+            <h3 class="d-flex justify-content-center text-colour">An inspiring programmer, designer and gamer</h3>
             <div class="d-flex justify-content-center align-items-center">
                 <a href="#section1" class="btn btn-red no_cursor test-link">Proceed</a>
             </div>
