@@ -18,6 +18,10 @@
                 opacity: 1;
             }
         }
+        @font-face {
+            font-family: Game;
+            src: url('../fonts/GAME_glm.ttf');
+        }
         .spacing {padding: 20px; height: 10px;}
         body, html {margin: 0; padding: 0; height: 100%; overflow: hidden; }
         body {overflow-y: auto; display: flex; flex-direction: column; margin:0;}
@@ -30,15 +34,17 @@
         .btn-black:hover {background-color:white; color:black}
         .bg-red {background-color: red;}
         .bg-black {background-color: black;}
-        .text {font-family: cursive;}
+        .font-black { color:#000022}
         a {font-size: xx-large;}
         #particles-js { position: fixed;  top: 0; left: 0; width: 100%; height: 100%; background-color: black; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
         .count-particles { background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: 0.8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; }
         .js-count-particles { font-size: 1.1em; }
         #stats, .count-particles { margin-top: 5px; margin-left: 5px; }
-        .project {color: #ff474c; animation: slideIn 2s ease-out;}
+        .project {color: #ff474c; background-color: #000022; animation: slideIn 2s ease-out;}
         .project:hover {background-color: red; color: white;}
-        .card { animation: slideIn 1s ease-out;}
+        .title {animation: slideIn 1s ease-in}
+        .card { animation: slideIn 1s ease-out; cursor: none;}
+        .game-text {font-family:Game;}
         .no_cursor {cursor: none;}
         .cursor {position: fixed;width: 30px;height: 30px;border: 3px solid rgba(245, 245, 245, 0.8);border-radius: 50%;background: rgba(245, 245, 245, 0.1);pointer-events: none;mix-blend-mode: difference;z-index: 9999;transition: transform 0.15s ease;}
     </style>
@@ -46,40 +52,34 @@
 <body>
     <div id="particles-js" class="no_cursor"></div>
     <div class="cursor"></div>
-    <table class="table no_cursor">
-        <%- include('partials/navbar') %>
-        <thead>
-            <tr>
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <div class="card d-flex justify-content-center" style="width:700px">
-                        <div>
-                            <h1 class="card-body d-flex justify-content-center">Mobile Legends Shop</h1><br>
-                            <h4 class="card-body d-flex justify-content-center">Website for Mobile legends players.</h4><br>
-                            <p class="card-body d-flex justify-content-center"><img src=MLshop.png></p>
-                            <a class=" btn btn-red no_cursor d-flex justify-content-center project test-link" href="/prog1">Find out more</a>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <div class="card d-flex justify-content-center" style="width:700px">
-                        <div>
-                            <h1 class="card-body d-flex justify-content-center">Pokemon List App</h1><br>
-                            <h4 class="card-body d-flex justify-content-center">An App for Pokemon fans</h4><br>
-                            <p class="card-body d-flex justify-content-center"><img src=pokemonapp.png></p>
-                            <a class="card-body btn btn-red d-flex justify-content-center project no_cursor test-link" href="/prog2">Find out more</a>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <%- include('partials/navbar') %>
 
+    <h1 class="d-flex justify-content-center align-items-center mt-5 text-white title game-text" style="z-index: 2; position: relative;">
+        Programming Projects
+    </h1>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card d-flex justify-content-center" style="width: 100%; background-image: url('MLshop.png'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; border-radius: 10px;">
+                    <div>
+                        <h1 class="card-body d-flex justify-content-center game-text">Mobile Legends Shop</h1><br>
+                        <h4 class="card-body d-flex justify-content-center game-text bg-red">Website for Mobile legends players.</h4><br>
+                        <a class="btn btn-red no_cursor d-flex justify-content-center project test-link" href="/prog1">Find out more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card d-flex justify-content-center" style="width: 100%; background-image: url('pokemonapp.png'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; border-radius: 10px;">
+                    <div>
+                        <h1 class="card-body d-flex justify-content-center game-text font-black">Pokemon List App</h1><br>
+                        <h4 class="card-body d-flex justify-content-center game-text bg-red">An App for Pokemon fans</h4><br>
+                        <a class="btn btn-red d-flex justify-content-center project no_cursor test-link" href="/prog2">Find out more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://threejs.org/examples/js/libs/stats.min.js"></script> 

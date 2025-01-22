@@ -18,6 +18,10 @@
                 opacity: 1;
             }
         }
+        @font-face {
+            font-family: Game;
+            src: url('../fonts/GAME_glm.ttf');
+        }
         .spacing {padding: 20px; height: 10px;}
         body, html {margin: 0; padding: 0; height: 100%; overflow-y: auto;}
         #background-video {position: fixed;top: 0;left: 0;min-width: 100%;min-height: 100%;z-index: -1;object-fit: cover;}
@@ -30,15 +34,17 @@
         .bg-red {background-color: red;}
         .bg-black {background-color: black;}
         .text {font-family: cursive;}
+        .game-text {font-family: Game;}
         a {font-size: xx-large;}
-        .project {color: #ff474c; animation: slideIn 2s ease-out;}
+        .project {color: #ff474c; background-color: #000022; animation: slideIn 2s ease-out;}
         .project:hover {background-color: red; color: white;}
         .card { animation: slideIn 1s ease-out;}
+        .card-body {cursor: none;}
         #particles-js { position: absolute; width: 100%; height: 100%; background-color: black; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
         .count-particles { background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: 0.8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; }
         .js-count-particles { font-size: 1.1em; }
         #stats, .count-particles { margin-top: 5px; margin-left: 5px; }
-
+        .title {animation: slideIn 1s ease-in}
         .no_cursor {cursor: none;}
         .cursor {
             position: fixed;
@@ -58,39 +64,32 @@
 <body>
     <div id="particles-js" class="no_cursor"></div>
     <div class="cursor"></div>
-    <table class="table no_cursor">
-        <%- include('partials/navbar') %>
-        <thead>
-            <tr>
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <div class="card d-flex justify-content-center" style="width:700px">
-                        <div>
-                            <h1 class="card-body d-flex justify-content-center">Web, Namecard and Stickers design</h1><br>
-                            <h4 class="card-body d-flex justify-content-center">Created using Adobe</h4><br>
-                            <p class="card-body d-flex justify-content-center" ><img src=webpagedesign.png style="width:400px;"></p>
-                            <a class="card-body btn btn-red no_cursor d-flex justify-content-center project test-link" href="/design1">Find out more</a>
-                        </div>
+    <%- include('partials/navbar') %>
+    <h1 class="d-flex justify-content-center align-items-center mt-5 text-white title game-text no_cursor" style="z-index: 2; position: relative;">
+        Design Projects
+    </h1>
+    <div class="container mt-5" >
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card d-flex justify-content-center no_cursor" style="width: 100%; background-image: url('webpagedesign.png'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; border-radius: 10px;">
+                    <div>
+                        <h1 class="card-body d-flex justify-content-center game-text bg-black">Web, Namecard and Stickers design</h1><br>
+                        <h4 class="card-body d-flex justify-content-center game-text bg-black">Created using Adobe</h4><br>
+                        <a class="card-body btn btn-red no_cursor d-flex justify-content-center project test-link" href="/design1">Find out more</a>
                     </div>
-                </td>
-                <td>
-                    <div class="card d-flex justify-content-center" style="width:700px">
-                        <div>
-                            <h1 class="card-body d-flex justify-content-center">Legendsic</h1><br>
-                            <h4 class="card-body d-flex justify-content-center">Created to listen to music</h4><br>
-                            <p class="card-body d-flex justify-content-center"><img src=Figma.png style="width:400px;"></p>
-                            <a class="card-body btn btn-red no_cursor d-flex justify-content-center project test-link" href="/design2">Find out more</a>
-                        </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card d-flex justify-content-center no_cursor" style="width: 100%; background-image: url('Figma.png'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; border-radius: 10px;" >
+                    <div>
+                        <h1 class="card-body d-flex justify-content-center game-text">Legendsic</h1><br>
+                        <h4 class="card-body d-flex justify-content-center game-text bg-black">Created to listen to music</h4><br>
+                        <a class="card-body btn btn-red no_cursor d-flex justify-content-center project test-link" href="/design2">Find out more</a>
                     </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
