@@ -23,6 +23,17 @@
     /* close button*/
     .closebtn {position: absolute;top: 20px;right: 45px;font-size: 60px;color: white;text-decoration: none;}
     .closebtn:hover{color: #ff0000;}
+    /*Fonts*/
+    .segosc-text {font-family: Segoesc;}
+    .game-text {font-family: Game;}
+    @font-face {
+        font-family: Game;
+        src: url('../fonts/GAME_glm.ttf');
+    }
+    @font-face {
+        font-family: Segoesc;
+        src: url('../fonts/segoesc.ttf');
+    }
 </style>
 
 <!-- Navbar for every page -->
@@ -45,9 +56,9 @@
 <div id="overlay" class="overlay no_cursor">
     <a href="javascript:void(0)" class="closebtn no_cursor test-link" id="closeOverlay">&times;</a>
     <div class="overlay-content">
-        <a class="nav-link no_cursor test-link" href="/about">About</a>
-        <a class="nav-link no_cursor test-link" href="/#section2">Projects</a>
-        <a class="nav-link no_cursor test-link" href="/#section3">Contact</a>
+        <a class="nav-link no_cursor test-link game-text" href="/about">About</a>
+        <a class="nav-link no_cursor test-link game-text" href="/#section2">Projects</a>
+        <a class="nav-link no_cursor test-link game-text" href="/#section3">Contact</a>
     </div>
 </div>
 

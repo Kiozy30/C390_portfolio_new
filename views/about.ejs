@@ -10,7 +10,7 @@
     <style>
         /*Body and HTML*/
         .spacing {padding: 20px; height: 10px;}
-        body, html {margin: 0; padding: 0; height: 220%; overflow-y: auto;}
+        body, html {margin: 0; padding: 0; height: 230%; overflow-y: auto;}
         .content {position: relative;z-index: 1;color: white;text-align: center;padding: 20px;}
         /*Buttons*/
         .btn-black {background-color: black;}
@@ -24,9 +24,19 @@
         .bg-red {background-color: red;}
         .bg-black {background-color: black;}
         /*Fonts*/
-        .text {font-family: cursive;}
+        h1 {font-size: 80px;}
+        .segosc-text {font-family: Segoesc;}
+        .game-text {font-family: Game;}
+        @font-face {
+            font-family: Game;
+            src: url('../fonts/GAME_glm.ttf');
+        }
+        @font-face {
+            font-family: Segoesc;
+            src: url('../fonts/segoesc.ttf');
+        }
         /*Particle-background*/
-        #particles-js { position: absolute; width: 100%; height: 500%; background-color: black; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+        #particles-js { position: absolute; width: 100%; height:540%; background-color: black; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
         .count-particles { background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: 0.8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; }
         .js-count-particles { font-size: 1.1em; }
         #stats, .count-particles { margin-top: 5px; margin-left: 5px; }
@@ -41,30 +51,31 @@
     <div class="cursor"></div>
     <div class="no_cursor" id=title>
         <%- include('partials/navbar') %>
-        <h1 class="d-flex justify-content-center align-items-center no_cursor" style="position: relative;">About Me</h1>
+        <h1 class="d-flex justify-content-center align-items-center no_cursor game-text" style="position: relative;">About Me</h1>
     </div>
+    <br><br>
 
     <div class="container d-flex justify-content-center align-items-center no_cursor" style="position: relative;">
         <div class="row col-md-10">
             <div class="col-md-6 d-flex flex-column justify-content-center">
-                <h3 class="card-title text-center">Who Am I?</h3>
-                <p class="text card-body">
+                <h3 class="card-title text-center game-text">Who Am I?</h3>
+                <p class="segosc-text card-body">
                     Hey There! My name is Akio and I am currently a Year 2 student studying the diploma of Digital Design and Development or D3D for short at Republic Polytechnic.
                     I am born and raised in Singapore and my ethicity is chinese. 
                     <br><br>
                     "Enjoy the little things in life, be it in despair or in excitement." this quote is what I believed in in life and how I continue to strive my best in life.
                     This is my Portfolio where you can find out what I do in Republic Polytechnic.
                 </p>
-                <h3 class="text-center"> What do you like doing?</h3>
-                <p class="text card-body">
+                <h3 class="text-center game-text"> What do I like doing?</h3>
+                <p class="segosc-text card-body">
                     I have tons of things that I love doing!
                     However, if I were to choose 3 things that I enjoy doing the most it would be 
-                    <ul class="text">
+                    <ul class="segosc-text">
                         <li>Volleyball</li>
                         <li>Gaming</li>
                         <li>Playing Guitar</li>
                     </ul>
-                    <p class="text">Playing Volleyball for me always gives me the passion to drive harder and harder. 
+                    <p class="segosc-text">Playing Volleyball for me always gives me the passion to drive harder and harder. 
                     I started playing volleyball as my hobby when i was 13 years old. 
                     And since then, I never regret taking up the sport and play as my hobby.
                     I wanted to join volleyball in my secondary school but I was given to join concert band.
@@ -72,7 +83,7 @@
                     Even now in school, i will always play during my free time.
                     </p>
                     <br>
-                    <p class="text">
+                    <p class="segosc-text">
                     Gaming is also one of things I love to do. 
                     Although the only few games i play are like Mobile Legends, Honor of kings, Super Mecha Champions but I still love gaming.
                     In fact, my team and I participated in a competition held in Campus Game Festival on the 26 and 27 of October.
@@ -80,25 +91,25 @@
                     I am also hoping to join a professional squad in Mobile Legends in the future as part of my job. 
                     </p>
                     <br>
-                    <p class="text">
+                    <p class="segosc-text">
                     Playing Guitar was something that I picked up recently around 6 of October but ever since I picked it up, I have been hooked through out the holidays.
                     Do you know the number of songs you can learn and play on the guitar? I also don't know!
                     However, that's why everyone learns and plays. 
                     When I started playing the guitar, my friend support me in every way possible and teach me what I should learn and do.
                     </p>
                     <br>
-                    <p class="text">
+                    <p class="segosc-text">
                     So this are the 3 things I love doing the most!
                     </p>
                 </p>
-                <h3 class="text-center"> What are your skills?</h3>
-                <p class="text card-body">
+                <h3 class="text-center game-text"> What are your skills?</h3>
+                <p class="segosc-text card-body">
                       Through this diploma, I learn different kinds of skills but to narrow down the two important skills learn, it will be development and design.
                       However, I would say that I am more of a developer person as I would prefer to code and learn the many things of coding then to design.
                       But dont get me wrong, I do love designing too!
                       <br>
                       The other skills that I learnt would be like:
-                      <ul class="text">
+                      <ul class="segosc-text">
                         <li>teamwork skills,</li>
                         <li> public speaking,</li>
                         <li>problem solving,</li>
@@ -119,10 +130,11 @@
                 <img src="Volunteery.jpg" alt="Me" class="img-fluid mb-3" style="max-width: 100%;">
             </div>
             <div class="col-md-6 d-flex flex-column justify-content-center">
-                <h3 class="card-title text-center">What are my Achievements/Volunteery Work/Services & leaderships that I have/done?</h3>
-                <p class="text card-body">
+                <h3 class="card-title text-center game-text">What are my Achievements/Volunteery Work/Services & leaderships that I have or done?</h3>
+                <p class="segosc-text card-body">
                     I have participated in different times of volunteery work and got different achievements in my life and here are some of the listed few below:
-                    <ul class="text"><h4>Achievements & Volunteering work:</h4>
+                    <h4 class="game-text">Achievements & Volunteering work:</h4>
+                    <ul class="segosc-text">
                         <li>Year: 2015, Joined Soka YMD Gym core.</li>
                         <li>Year: 2020, volunteered and helped out with the elderly shelter.</li>
                         <li>Year: 2021, participated in Singapore Youth Festival(SYF) with my CCA Concert Band, got certificate of achievement.</li>
@@ -132,9 +144,10 @@
                     </ul>
                     <br>
                 </p>
-                <p class="text card-body">
+                <p class="segosc-text card-body">
                     I also had different leadership roles in my life and these are the roles that I have taken:
-                    <ul class="text"><h4>Leadership Roles:</h4>
+                    <h4 class="game-text">Leadership Roles:</h4>
+                    <ul class="segosc-text">
                         <li>Year: 2019, Role: Chairperson of my sec 1 class</li>
                         <li>Year: 2020, Role: Student Leader in the student council</li>
                         <li>Year: 2020, Role: String bass Section Leader in Concert Band</li>
@@ -146,21 +159,25 @@
             </div>
         </div>
     </div>
-    <div class="card justify-content-center container-fluid bg-orange no_cursor" style="width:700px; height:600px">
+    <div class="card justify-content-center container-fluid bg-orange no_cursor" style="width:700px; height:750px">
         <div class="d-flex justify-content-center">
             <img class="image-pics no_cursor"  src="document.jpeg" alt="Card image">
         </div>
         <div class="card-body no_cursor">
-          <h3 class="card-title d-flex justify-content-center">This is my Resume</h3>
+          <h3 class="card-title d-flex justify-content-center game-text">This is my Resume</h3>
           <p class="card-text d-flex justify-content-center">
-            <a href="Resume.pdf" id="download-link" class="btn btn-black download-link no_cursor test-link" download="Resume.pdf">Download Resume</a>
+            <a href="/pdf/Resume.pdf" id="download-link" class="btn btn-black download-link no_cursor test-link segosc-text" download="Resume.pdf">Download Resume</a>
           </p>
-          <br><h3 class="card-title d-flex justify-content-center">This is my Cover Letter</h3>
+          <br><h3 class="card-title d-flex justify-content-center game-text">This is my Cover Letter</h3>
           <p class="card-text d-flex justify-content-center">
-            <a href="CoverLetter.pdf" id="download-link" class=" btn btn-black download-link no_cursor test-link" download="CoverLetter.pdf">Download CoverLetter</a>
+            <a href="/pdf/CoverLetter.pdf" id="download-link" class=" btn btn-black download-link no_cursor test-link segosc-text" download="CoverLetter.pdf">Download CoverLetter</a>
           </p>
+          <br><h3 class="card-title d-flex justify-content-center game-text">This is my Personal Report</h3>
+          <h3 class="card-title d-flex justify-content-center game-text">Tested using high5test</h3>
+          <p class="card-text d-flex justify-content-center">
+            <a href="/pdf/AkioTan-PersonalReport.pdf" id="download-link" class=" btn btn-black download-link no_cursor test-link segosc-text" download="Akio's Personal Report.pdf">Download Personal Report</a>
         </div>
-        <a href="#title" class="btn btn-red no_cursor test-link">Back to the top</a>
+        <a href="#title" class="btn btn-red no_cursor test-link segosc-text">Back to the top</a>
     </div>
     <br><br>
     

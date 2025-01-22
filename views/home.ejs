@@ -18,10 +18,24 @@
         .cursor {position: fixed;width: 30px;height: 30px;border: 3px solid rgba(245, 245, 245, 0.8);border-radius: 50%;background: rgba(245, 245, 245, 0.1);
                 pointer-events: none;mix-blend-mode: difference;z-index: 9999;transition: transform 0.15s ease;}
         /*Text and fonts*/
-        .text {font-family: cursive;}
+        .segoesc-text {font-family: Segoesc;}
+        .game-text {font-family:Game;}
         .text-size {font-size: 20px;}
         h1 {font-size: 80px;}
         h2 {font-size: 40px;}
+        @font-face {
+            font-family: Game;
+            src: url('../fonts/GAME_glm.ttf');
+        }
+
+        @font-face {
+            font-family: Gamelia;
+            src: url('../fonts/Gamelia.otf');
+        }
+        @font-face {
+            font-family: Segoesc;
+            src: url('../fonts/segoesc.ttf');
+        }
         /*Icons and img*/
         .icon-links { display: flex; justify-content: center; gap: 50px;}
         .icon-links img { width: 50px; }
@@ -36,7 +50,7 @@
         .count-particles { background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; }
         .js-count-particles { font-size: 1.1em; }
         /*Cover page Css*/
-        main {display: block;unicode-bidi: isolate;}
+        main {display: block;unicode-bidi: isolate; font-family: Game;}
         .hero { height: 100vh;overflow: hidden;position: relative;}
         
         /*Animations to change from one page to another*/
@@ -55,7 +69,6 @@
         .project {color: #ff474c; animation: slideIn 1s ease-out;}
         .project:hover {background-color: red; color: white;}
         .section3 {animation: slideIn 1s ease-out;}
-
     </style>
 </head>
 <body>
@@ -70,8 +83,8 @@
         </div>
         <main class="hero" id="landing">
             <br><br><br><br><br><br><br><br><br><br><br><br>
-            <h1 class=" d-flex justify-content-center text-colour">Kioz Collection</h1>
-            <h3 class="d-flex justify-content-center text-colour">An inspiring programmer, designer and gamer</h3>
+            <h1 class=" d-flex justify-content-center">Kioz Collection</h1>
+            <h3 class="d-flex justify-content-center">An inspiring programmer, designer and gamer</h3>
             <div class="d-flex justify-content-center align-items-center">
                 <a href="#section1" class="btn btn-red no_cursor test-link">Proceed</a>
             </div>
@@ -83,17 +96,17 @@
         <div class="divider-container-parallax"></div>
         <div id="section1">
             <%- include("partials/navbar") %>
-            <h1 class="d-flex justify-content-center">Who Are You?</h1>
+            <h1 class="d-flex justify-content-center game-text">Who Are You?</h1>
             <br><br><br><br><br><br>
 
             <div id="aboutme" class="container d-flex justify-content-center align-items-center no_cursor" style="position: relative;">
                 <div class="row col-md-10">
                     <div class="col-md-6 d-flex flex-column justify-content-center">
-                        <p class="text card-body">
+                        <p class="segoesc-text card-body">
                             Hey There! My name is Akio and I am currently a Year 2 student studying the diploma of Digital Design and Development or D3D for short at Republic Polytechnic.
                             I am born and raised in Singapore and my ethicity is chinese. 
                             <br><br>
-                            "Enjoy the little things in life, be it in despair or in excitement." this quote is what I believed in in life and how I continue to strive my best in life.
+                            "Enjoy the little things in life, be it in despair or in excitement." this quote is what I believed in life and how I continue to strive my best in life.
                             <a href="/about" class=" btn btn-red mx-3 mt-3 no_cursor test-link">Click here to see more about me!</a>
                         </p>
                     </div>
@@ -109,20 +122,20 @@
         
         <div class="mx-3 mt-1 animate__animated animate__fadeInUp">
             <br><br>
-            <h1 class="d-flex justify-content-center align-items-center">Projects</h1>
+            <h1 class="d-flex justify-content-center align-items-center game-text">Projects</h1>
             <br><br><br>
             <div class="row col-md-12 d-flex justify-content-center">
-                <div class="col-md-3 card d-flex justify-content-center align-items-center">
+                <div class="col-md-3 card d-flex justify-content-center align-items-center segoesc-text">
                     <div class="card-body"><h3>Programming</h3></div>
                     <div class="card-body"><h4>Created with, Java, HTML and CSS</h4></div>
                     <div class="card-body"><h4><a class="btn btn-red no_cursor project test-link" href="/prog">Discover more</a></h4></div>
                 </div><br><br><br>
-                <div class="col-md-3 card d-flex justify-content-center align-items-center">
+                <div class="col-md-3 card d-flex justify-content-center align-items-center segoesc-text">
                     <div class="card-body"><h3>Design</h3></div>
                     <div class="card-body"><h4>Created with Photoshop, Illustrator, Figma</h4></div>
                     <div class="card-body"><h4><a class="btn btn-red no_cursor project test-link" href="/design">Discover more</a></h4></div>
                 </div><br><br><br>
-                <div class="col-md-3 card d-flex justify-content-center align-items-center">
+                <div class="col-md-3 card d-flex justify-content-center align-items-center segoesc-text">
                     <div class="card-body"><h3>VR Design/Game</h3></div>
                     <div class="card-body"><h4>Created with Unity, Javascript</h4></div>
                     <div class="card-body"><h4><a class="btn btn-red no_cursor project test-link" href="/vr">Discover more</a></h4></div>
@@ -135,7 +148,7 @@
 
         <div class="section3">
             <div class="container mt-3">
-                <h1 class=" d-flex justify-content-center align-items-center text" style="position: relative;">Contacts</h1>
+                <h1 class=" d-flex justify-content-center align-items-center game-text" style="position: relative;">Contacts</h1>
                 <div class="icon-linking no_cursor test-link">
                     <a href="https://www.linkedin.com/in/akio-tan-a41860321/" target="_blank" style="position: relative;" class="no_cursor"><img src="linkedIn.png" alt="LinkedIn"></a>
                     <a href="https://www.instagram.com/kioz.gg/" target="_blank" style="position: relative;" class="no_cursor"><img src="instagram.png" alt="Instagram"></a>
@@ -146,14 +159,10 @@
         
             <br><br>
             <div class="card justify-content-center container-fluid bg-purple no_cursor" style="width:400px">
-                <div class="d-flex justify-content-center icon-links">
-                    <img src="location.png" alt="Location">
-                    <img src="phone.png" alt="Phone">
-                </div>
                 <div class="card-body">
-                  <h4 class="card-title d-flex justify-content-center text">Akio Tan</h4>
-                  <p class="card-text d-flex justify-content-center text">Phone number: +65 8139 0300</p>
-                  <p class="card-text d-flex justify-content-center text">Location: Singapore, SG</p>
+                  <h4 class="card-title d-flex justify-content-center segoesc-text">Akio Tan</h4>
+                  <p class="card-text d-flex justify-content-center segoesc-text">Phone number: +65 8139 0300</p>
+                  <p class="card-text d-flex justify-content-center segoesc-text">Location: Singapore, SG</p>
                 </div>
             </div>
         </div>
@@ -161,7 +170,7 @@
         <br><br><br><br><br>
 
         <div class="d-flex justify-content-center align-items-center">
-            <a href="#section1" class=" btn btn-red no_cursor test-link">Back to the top</a>
+            <a href="#section1" class=" btn btn-red no_cursor test-link game-text">Back to the top</a>
         </div>
         
         <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
