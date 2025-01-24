@@ -8,19 +8,19 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Akio's VR project 2</title>
     <style>
+      .techno-text {font-family: techno;}
+      .game-text {font-family: Game; color: red;}
+      h1 {font-size: 100px;}
       .spacing {padding: 15px;}
-
       .bg-orange {background-color: orange}
       .text-color-black {color: black}
-      p {font-family: GAME; font-size: 20px;}
+      p {font-size: 20px;}
       .btn-red { border-color: red; color: white; }
       .btn-red:hover { background-color: red; }
       body, html {margin: 0; padding: 0; height: 100%; overflow: hidden; cursor: none;}
-      body {overflow-y: auto; display: flex; flex-direction: column;}
+      body {overflow-y: auto; display: flex; flex-direction: column; font-family: techno;}
       .content {position: relative;z-index: 1;color: white;text-align: center;padding: 20px;}
       .icon-links { display: flex; justify-content: center; gap: 60px; height: 250px;}
-
-      body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } 
       canvas{ display: block; } 
 
       .video-container {width: 80%;max-width: 800px; margin: 0 auto; display: flex; justify-content: center; opacity: 100; position: relative; z-index: 2; padding-top: 5%;}
@@ -52,10 +52,13 @@
   <div class="cursor"></div>
   <div id="title"><%- include('partials/navbar') %></div>
     <div id="particles-js" class="no_cursor"></div>
+    <h1 class="d-flex justify-content-center align-items-center mt-5 text-white title game-text no_cursor" style="z-index: 2; position: relative;">
+        VR Project II
+    </h1><br><br>
 
     <div class="card d-flex justify-content-center align-items-center container-fluid no_cursor" style="width: 1000px;">
-        <h2 class="card-title d-flex justify-content-center">Robo Name Card</h2>
-        <p class="card-text d-flex justify-content-center"> Created using Unity </p>
+        <h2 class="card-title d-flex justify-content-center game-text"><b>Robo Name Card</b></h2>
+        <p class="card-text d-flex justify-content-center techno-text"> Created using Unity </p>
     </div> 
 
     <div class="video-container no_cursor">
@@ -69,23 +72,23 @@
       <div class="d-flex justify-content-center">
       </div>
       <div class="card-body">
-        <h3>Objective of this RoboNameCard:</h3>
+        <h2 class="game-text"><b>Objective of this RoboNameCard:</b></h2>
         <br>
         <p class="card-text d-flex justify-content-center">
             The objective of this RoboNameCard is actually for both kids and adults to experience VR images coming out of Name Cards.
-            Name Cards are usually use to promote yourself and give your details to others to know who you are.
-            Having a Name Card with a VR image popping up will inspire the kids to play with it and for their parents to take the name card from you.
+            <br><br>Name Cards are usually use to promote yourself and give your details to others to know who you are.
+            <br><br>Having a Name Card with a VR image popping up will inspire the kids to play with it and for their parents to take the name card from you.
         </p>
         <br>
-        <h3>How does it work?</h3>
+        <h2 class="game-text"><b>How does it work?</b></h2>
         <br>
         <p class="card-text d-flex justify-content-center">
             So the Name Card will only work for android phone users so for apple phone user, it doesnt work *_*
-            It also works with the physical card but I dont have the video with me so I use the andriod image
-            How it works is that as the video shows, you would need to show the image of the namecard to the camera, once it is shown, the 3D VR Robot will appear on the Namecard.
-            As you rotate it around, the robot will also rotate with you so you can see the whole image of the robot. 
-            It only works for the front of the card image so you cant show the back of it.
-            The robot can be shown in the image below
+            <br><br>It also works with the physical card but I dont have the video with me so I use the andriod image
+            <br><br>How it works is that as the video shows, you would need to show the image of the namecard to the camera, once it is shown, the 3D VR Robot will appear on the Namecard.
+            <br><br>As you rotate it around, the robot will also rotate with you so you can see the whole image of the robot. 
+            <br><br>It only works for the front of the card image so you cant show the back of it.
+            <br><br>The robot can be shown in the image below
         </p>
         <div class="card-text d-flex justify-content-center"><img src="Robo.png"></div>
         <p>Credits: Muiz Harith </p>

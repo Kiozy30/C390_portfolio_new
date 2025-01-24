@@ -8,10 +8,12 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Akio's programming project 2</title>
     <style>
+      .techno-text {font-family: techno;}
+      .game-text {font-family: Game; color: red;}
       .spacing {padding: 15px;}
       .bg-orange {background-color: orange}
       .text-color-black {color: black}
-      p {font-family: Georgia, 'Times New Roman', Times, serif; font-size: 20px;}
+      p {font-size: 20px;}
       .img-1 { display: flex; justify-content: center; gap: 60px; width: 400px;}
       .img-links { display: flex; justify-content: center; gap: 60px; height: 600px}
       .btn-red { border-color: red; color: white; }
@@ -28,6 +30,7 @@
       #stats, .count-particles { margin-top: 5px; margin-left: 5px; }
       .no_cursor {cursor: none;}
       .cursor {position: fixed;width: 30px;height: 30px; border: 3px solid rgba(245, 245, 245, 0.8);border-radius: 50%;background: rgba(245, 245, 245, 0.1);pointer-events: none;mix-blend-mode: difference;z-index: 9999;transition: transform 0.15s ease;}
+      h1 {font-size: 100px;}
     </style>
 </head>
 <body>
@@ -35,9 +38,13 @@
   <div id="title"><%- include('partials/navbar') %></div>
     <div id="particles-js" class="no_cursor"></div>
 
+    <h1 class="d-flex justify-content-center align-items-center mt-5 text-white title game-text" style="z-index: 2; position: relative;">
+      Programming Project II
+    </h1><br><br>
+
     <div class="card d-flex justify-content-center align-items-center container-fluid no_cursor" style="width: 1000px;">
-        <h2 class="card-title d-flex justify-content-center ">The Pokemon App</h2>
-        <p class="card-text d-flex justify-content-center"> Created using JavaScript, HTML, CSS </p>
+        <h2 class="card-title d-flex justify-content-center game-text"><b>The Pokemon App</b></h2>
+        <p class="card-text d-flex justify-content-center techno-text"> Created using JavaScript, HTML, CSS </p>
     </div> 
 
     <div class="video-container no_cursor">
@@ -47,12 +54,12 @@
     </div>
     <br><br><br>
 
-    <div class="card justify-content-center container-fluid no_cursor" style="width:1000px; height:5000px">
+    <div class="card justify-content-center container-fluid no_cursor  techno-text" style="width:1000px; height:5000px">
       <div class="d-flex justify-content-center">
       </div>
       <div class="card-body">
-        <h3>Programming Language and </h3>
-        <h3>other databases/external resources used:</h3>
+        <h2 class="game-text"><b>Programming Language and</b> </h2>
+        <h2 class="game-text"><b>other databases/external resources used:</b></h2>
         <br><br><br>
         <p class="card-text d-flex justify-content-center"> JavaScript</p>
         <p class="card-text d-flex justify-content-center"> HTML</p>
@@ -60,46 +67,46 @@
         <p class="card-text d-flex justify-content-center"> Webstorm</p>
         <p class="card-text d-flex justify-content-center"> Android Studio</p>
         <br>
-        <h3>App Idea and Target Audiences:</h3>
+        <h3 class="game-text"><b>App Idea and Target Audiences:</b></h3>
         <br>
         <p class="card-text d-flex justify-content-center"> 
           This project is for people who wants to contain their pokemon cards online. 
-          Although based on the video, it is just 3 types of pokemon but when I update the app, there will be more types of pokemon.
-          This also allows other audiences to show the other parties what kind of pokemon they have. 
+          <br><br>Although based on the video, it is just 3 types of pokemon but when I update the app, there will be more types of pokemon.
+          <br><br>This also allows other audiences to show the other parties what kind of pokemon they have. 
         </p>
-        <br><br>
-        <h3>Why a Pokemon App and not other kinds of app?</h3>
+        <br><br><br><br><br><br><br><br>
+        <h3 class="game-text"><b>Why a Pokemon App and not other kinds of app?</b></h3>
         <br>
         <p class="card-text d-flex justify-content-center">
           The Pokémon theme provides an engaging context, leveraging the franchise's popularity to make learning enjoyable. 
-          It creates a unique experience, connecting users' love for Pokémon with their interest in coding, unlike other generic educational apps.
-          I have also been in love with Pokémon since when i was 5 years old and it has been with living in my mind since then.
-          So everytime if there is something related to pokemon, I will chase after that. 
+          <br><br>It creates a unique experience, connecting users' love for Pokémon with their interest in coding, unlike other generic educational apps.
+          <br><br>I have also been in love with Pokémon since when i was 5 years old and it has been with living in my mind since then.
+          <br><br>So everytime if there is something related to pokemon, I will chase after that. 
         </p>
-        <br><br>
-        <h3>What are its functions?</h3>
+        <br><br><br><br><br><br><br><br>
+        <h3 class="game-text"><b>What are its functions?</b></h3>
         <br>
         <p class="card-text d-flex justify-content-center">
           <ul>
             <li>
               <p>Able to display the card name and the card image into different types.</p>
-              <div class="card"><img class="img-1" src=pokemon1.png alt="Card image"></div>
+              <div class="card d-flex justify-content-center align-items-center"><img class="img-1" src=pokemon1.png alt="Card image"></div>
             </li>
             <br><br><br><br> 
             <li>
               <p>Able to add more cards that you recently have and add into the different types.</p>
-              <div class="card"><img class="img-links" src=pokemon2.png alt="Card image"></div>
+              <div class="card d-flex justify-content-center align-items-center"><img class="img-1" src=pokemon2.png alt="Card image"></div>
             </li>
             <br><br><br><br>
             <li>
               <p>Able to update the cards that is displayed if it was inputted wrongly.</p>
-              <div class="card"><img class="img-links" src=pokemon3.png alt="Card image"></div>
+              <div class="card d-flex justify-content-center align-items-center"><img class="img-1" src=pokemon3.png alt="Card image"></div>
             </li>
             <br><br><br><br>
             <li>
               <p>Able to delete the displayed cards if you lost the card or you inputted wrongly.
                 And upon deleting it, you would have a pop up message shown below to confirm your decision</p>
-              <div class="card"><img class="img-links" src=pokemon4.png alt="Card image"></div>
+              <div class="card d-flex justify-content-center align-items-center"><img class="img-1" src=pokemon4.png alt="Card image"></div>
             </li>
           </ul>
         </p>

@@ -8,10 +8,16 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Akio's programming project 1</title>
     <style>
+      .techno-text {font-family: techno;}
+      @font-face {
+          font-family: Techno;
+          src: url('../fonts/Techno.ttf');
+      }
+      .game-text {font-family: Game; color: red;}
       .spacing {padding: 15px;}
       .bg-orange {background-color: orange}
       .text-color-black {color: black}
-      p {font-family: Georgia, 'Times New Roman', Times, serif; font-size: 20px;}
+      p {font-size: 20px;}
       .icon-links { display: flex; justify-content: center; gap: 60px; height: 250px;}
       .btn-red { border-color: red; color: white; }
       .btn-red:hover { background-color: red; }
@@ -37,7 +43,7 @@
           z-index: 9999;
           transition: transform 0.15s ease;
       }
-
+      h1 {font-size: 100px;}
     </style>
 </head>
 <body>
@@ -45,9 +51,13 @@
   <div id="title"><%- include('partials/navbar') %></div>
     <div id="particles-js" class="no_cursor"></div>
 
+    <h1 class="d-flex justify-content-center align-items-center mt-5 text-white title game-text" style="z-index: 2; position: relative;">
+      Programming Project I
+    </h1><br><br>
+
     <div class="card d-flex justify-content-center align-items-center container-fluid no_cursor" style="width: 1000px;">
-        <h2 class="card-title d-flex justify-content-center ">The Legends shop</h2>
-        <p class="card-text d-flex justify-content-center"> Created using JavaScript, HTML, CSS for my CA2.</p>
+        <h2 class="card-title d-flex justify-content-center game-text"><b>The Legends shop</b></h2>
+        <p class="card-text d-flex justify-content-center techno-text"> Created using JavaScript, HTML, CSS.</p>
     </div> 
 
     <div class="video-container no_cursor">
@@ -57,12 +67,12 @@
     </div>
     <br><br><br>
 
-    <div class="card justify-content-center container-fluid no_cursor" style="width:1000px; height:2000px">
-      <div class="d-flex justify-content-center">
+    <div class="card justify-content-center container-fluid no_cursor techno-text" style="width:1000px; height:2150px">
+      <div class="d-flex justify-content-center techno-text">
       </div>
       <div class="card-body">
-        <h3>Programming Language and </h3>
-        <h3>other databases/external resources used:</h3>
+        <h2 class="game-text"><b>Programming Language and</b> </h2>
+        <h2 class="game-text"><b>other databases/external resources used:</b></h2>
         <br><br><br>
         <p class="card-text d-flex justify-content-center"> JavaScript</p>
         <p class="card-text d-flex justify-content-center"> Express Javascript</p>
@@ -71,37 +81,37 @@
         <p class="card-text d-flex justify-content-center"> phpMyAdmin</p>
         <p class="card-text d-flex justify-content-center"> Render</p>
         <br>
-        <h3>App Idea and Target Audiences:</h3>
+        <h2 class="game-text"><b>App Idea and Target Audiences:</b></h2>
         <br>
         <p class="card-text d-flex justify-content-center"> 
           The idea revolves around providing an online platform to sell Mobile Legends (ML) diamonds. 
-          The app caters to ML players who want a cost-effective way to buy in-game diamonds. 
-          It offers various diamond bundles starting from 30 up to 100,000, 
+          <br><br>The app caters to ML players who want a cost-effective way to buy in-game diamonds. 
+          <br><br>It offers various diamond bundles starting from 30 up to 100,000, 
           alongside bonus add-on diamonds to enhance value. 
-          The app's design targets ML enthusiasts seeking affordable deals, 
+          <br><br>The app's design targets ML enthusiasts seeking affordable deals, 
           with additional resources like an "About" section for customers to learn about ML and the creator's gameplay experience.
         </p>
         <br><br>
-        <h3>Why choose an online gaming shop?</h3>
+        <h2 class="game-text"><b>Why choose an online gaming shop?</b></h2>
         <br>
         <p class="card-text d-flex justify-content-center">
-          The motivation stems from the creator's passion for Mobile Legends, 
+          <br><br>The motivation stems from the creator's passion for Mobile Legends, 
           its strategies, and its dynamic events, 
           such as "Ducati Event" and "Attack on Titan." 
-          These events often feature exclusive skins requiring expensive in-game diamonds. 
-          Third-party suppliers are an alternative but often lack affordability or worthwhile deals. 
-          Hence, the shop was conceptualized to bridge this gap by offering competitive pricing and better bundles.
+          <br><br>These events often feature exclusive skins requiring expensive in-game diamonds. 
+          <br><br>Third-party suppliers are an alternative but often lack affordability or worthwhile deals. 
+          <br><br>Hence, the shop was conceptualized to bridge this gap by offering competitive pricing and better bundles.
         </p>
         <br>
         <div class="card"><img class="icon-links" src=diamonds.png alt="Card image"></div>
         <br>
         <p>
           So I would usually go to a supplier to purchase cheaper diamonds.
-          However, I dont really like to offers they give in their shops as well as it is either not affordable or not worthwhile.
+          <br><br>However, I dont really like to offers they give in their shops as well as it is either not affordable or not worthwhile.
           So that is why I would choose an online gaming shop.
         </p>
         <br><br>
-        <h3>What are its functions?</h3>
+        <h2 class="game-text"><b>What are its functions?</b></h2>
         <br>
         <p class="card-text d-flex justify-content-center">
           <ul>

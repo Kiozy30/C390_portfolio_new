@@ -22,6 +22,10 @@
             font-family: Game;
             src: url('../fonts/GAME_glm.ttf');
         }
+        @font-face {
+            font-family: Techno;
+            src: url('../fonts/Techno.ttf');
+        }
         .spacing {padding: 20px; height: 10px;}
         body, html {margin: 0; padding: 0; height: 100%; overflow: hidden; }
         body {overflow-y: auto; display: flex; flex-direction: column; margin:0;}
@@ -45,6 +49,7 @@
         .title {animation: slideIn 1s ease-in}
         .card { animation: slideIn 1s ease-out; cursor: none;}
         .game-text {font-family:Game;}
+        .techno-text {font-family: techno;}
         .no_cursor {cursor: none;}
         .cursor {position: fixed;width: 30px;height: 30px;border: 3px solid rgba(245, 245, 245, 0.8);border-radius: 50%;background: rgba(245, 245, 245, 0.1);pointer-events: none;mix-blend-mode: difference;z-index: 9999;transition: transform 0.15s ease;}
     </style>
@@ -65,7 +70,7 @@
                     <div>
                         <h1 class="card-body d-flex justify-content-center game-text">Mobile Legends Shop</h1><br>
                         <h4 class="card-body d-flex justify-content-center game-text bg-red">Website for Mobile legends players.</h4><br>
-                        <a class="btn btn-red no_cursor d-flex justify-content-center project test-link" href="/prog1">Find out more</a>
+                        <a class="btn btn-red no_cursor d-flex justify-content-center project test-link techno-text" href="/prog1">Find out more</a>
                     </div>
                 </div>
             </div>
@@ -74,7 +79,7 @@
                     <div>
                         <h1 class="card-body d-flex justify-content-center game-text font-black">Pokemon List App</h1><br>
                         <h4 class="card-body d-flex justify-content-center game-text bg-red">An App for Pokemon fans</h4><br>
-                        <a class="btn btn-red d-flex justify-content-center project no_cursor test-link" href="/prog2">Find out more</a>
+                        <a class="btn btn-red d-flex justify-content-center project no_cursor test-link techno-text" href="/prog2">Find out more</a>
                     </div>
                 </div>
             </div>

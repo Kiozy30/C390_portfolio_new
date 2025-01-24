@@ -18,10 +18,6 @@
                 opacity: 1;
             }
         }
-        @font-face {
-            font-family: Game;
-            src: url('../fonts/GAME_glm.ttf');
-        }
         .spacing {padding: 20px; height: 10px;}
         body, html {margin: 0; padding: 0; height: 100%; overflow-y: auto;}
         #background-video {position: fixed;top: 0;left: 0;min-width: 100%;min-height: 100%;z-index: -1;object-fit: cover;}
@@ -39,6 +35,7 @@
         .text {font-family: cursive;}
         a {font-size: xx-large;}
         .game-text {font-family: Game;}
+        .techno-text {font-family: techno;}
         #particles-js { position: absolute; width: 100%; height: 100%; background-color: black; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
         .count-particles { background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: 0.8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; }
         .js-count-particles { font-size: 1.1em; }
@@ -61,7 +58,7 @@
             z-index: 9999;
             transition: transform 0.15s ease;
         }
-
+        
     </style>
 </head>
 <body>
