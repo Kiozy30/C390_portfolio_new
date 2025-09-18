@@ -18,7 +18,7 @@
     /* overlaying*/
     .overlay {height: 100%;width: 100%;position: fixed;top: 0;left: 0;background-color: rgba(0, 0, 0, 0.9);overflow: hidden;transition: 0.5s;display: none;z-index: 1000; }
     .overlay-content {position: relative;top: 50%;transform: translateY(-50%);text-align: center;}
-    .overlay-content a {padding: 8px;text-decoration: none;font-size: 50px;color: #ccc;display: block;transition: 0.3s;}
+    .overlay-content a {padding: 8px;text-decoration: none;color: #ccc;display: block;transition: 0.3s;}
     .overlay-content a:hover {color: #ff0000;}
     /* close button*/
     .closebtn {position: absolute;top: 20px;right: 45px;font-size: 60px;color: white;text-decoration: none;}
@@ -35,6 +35,8 @@
         font-family: Techno;
         src: url('../fonts/Techno.ttf');
     }
+    .main-text{font-size: 50px;}
+    .side-text{font-size: 20px;}
 </style>
 
 <!-- Navbar for every page -->
@@ -57,9 +59,12 @@
 <div id="overlay" class="overlay no_cursor">
     <a href="javascript:void(0)" class="closebtn no_cursor test-link" id="closeOverlay">&times;</a>
     <div class="overlay-content">
-        <a class="nav-link no_cursor test-link game-text" href="/about">About</a>
-        <a class="nav-link no_cursor test-link game-text" href="/#section2">Projects</a>
-        <a class="nav-link no_cursor test-link game-text" href="/#section3">Contact</a>
+        <a class="nav-link no_cursor test-link techno-text main-text" href="/about">About</a>
+        <a class="nav-link no_cursor test-link techno-text main-text" href="/#section2">Projects</a>
+        <a class="nav-link no_cursor test-link techno-text side-text" href="/prog">Programming Projects</a>
+        <a class="nav-link no_cursor test-link techno-text side-text" href="/design">Design Projects</a>
+        <a class="nav-link no_cursor test-link techno-text side-text" href="/vr">VR Projects</a>
+        <a class="nav-link no_cursor test-link techno-text main-text" href="/#section3">Contact</a>
     </div>
 </div>
 
